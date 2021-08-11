@@ -12,15 +12,7 @@ import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import Header from './header'
 import './layout.css'
-
-const DivEmContainer = styled.div`
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 0 1.0875rem 1.45rem;
-`
-const FooterEm = styled.footer`
-  margin: 2em auto 0;
-`
+import { gray } from './style/utility.module.css'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,6 +20,7 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          description
         }
       }
     }
@@ -37,24 +30,49 @@ const Layout = ({ children }) => {
     <React.Fragment>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <DivEmContainer>
-        <main>{children}</main>
         <FooterEm>
           <p>
-            <Link to='/page-2/'>Go to page 2</Link> <br />
-            <Link to='/about/'>Go to About</Link> <br />
+            <Link to='/page-2/'>Go to page 2</Link> /
+            <Link to='/about/'>Go to About</Link> /
             <Link to='/using-typescript/'>Go to "Using TypeScript"</Link>
           </p>
-          {new Date().getFullYear()}, Built with
-          {` `}
-          <a href='https://www.gatsbyjs.com'>Gatsby</a>
         </FooterEm>
+        <DivEmInner>
+          <MainEm>{children}</MainEm>
+        </DivEmInner>
+        {new Date().getFullYear()}, Built with
+        <p className={gray}>{data.site.siteMetadata?.description}</p>
+        <a href='https://www.gatsbyjs.com'>Gatsby</a>
       </DivEmContainer>
     </React.Fragment>
   )
 }
 
+/* ===== Style ===== */
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
 export default Layout
+
+const DivEmContainer = styled.div`
+  margin: 0 auto;
+  max-width: 100vw;
+  padding: 0 1.0875rem 1.45rem;
+`
+
+const MainEm = styled.main`
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+`
+
+const DivEmInner = styled.div`
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 1.0875rem 1.45rem;
+`
+
+const FooterEm = styled.footer`
+  margin: 2em auto 0;
+`

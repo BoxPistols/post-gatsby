@@ -1,0 +1,9 @@
+.gray {
+  color: var(--gray);
+}
+
+/* ===== Common Style ===== */
+:root {
+  /* Color */
+  --gray: #abc;
+}
