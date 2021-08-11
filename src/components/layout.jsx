@@ -6,6 +6,7 @@
  */
 
 import * as React from 'react'
+import Iframe from 'react-iframe'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
@@ -28,20 +29,25 @@ const Layout = ({ children }) => {
 
   return (
     <React.Fragment>
+
       <div className={youtube}>
-        <iframe
+        <Iframe
           id='ytplayer'
           type='text/html'
           width='720'
-          height='405'
-          src='https://www.youtube.com/embed/XdlmoLAbbiQ?autoplay=1'
+          height='360'
+          src='https://www.youtube.com/embed/XdlmoLAbbiQ?autoplay=1&mute=1&playsinline=1&loop=1&playlist=XdlmoLAbbiQ'
+          // ?autoplay=1&mute=1&playsinline=1&loop=1
+          // ?loop=1&playlist=XdlmoLAbbiQ
           frameborder='0'
-          allowfullscreen
-        ></iframe>
+          allow='fullscreen'
+        />
       </div>
 
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+
       <DivEmContainer>
+
         <FooterEm>
           <p>
             <Link to='/page-2/'>Go to page 2</Link> /
@@ -49,12 +55,15 @@ const Layout = ({ children }) => {
             <Link to='/using-typescript/'>Go to "Using TypeScript"</Link>
           </p>
         </FooterEm>
+
         <DivEmInner>
           <MainEm>{children}</MainEm>
         </DivEmInner>
+
         {new Date().getFullYear()}, Built with
         <p className={gray}>{data.site.siteMetadata?.description}</p>
         <a href='https://www.gatsbyjs.com'>Gatsby</a>
+
       </DivEmContainer>
     </React.Fragment>
   )
@@ -68,7 +77,8 @@ Layout.propTypes = {
 export default Layout
 
 const DivEmContainer = styled.div`
-  margin: 0 auto;
+  margin: 0 ;
+
   max-width: 100vw;
   padding: 0 1.0875rem 1.45rem;
 `

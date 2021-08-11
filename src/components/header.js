@@ -6,7 +6,7 @@ const Header = ({ siteTitle }) => (
   <header
     style={{
       // background: `rebeccapurple`,
-      background: `#234`,
+      background: `rgba(000, 000, 000, 0.9)`,
       marginBottom: `1.25rem`,
     }}
   >
