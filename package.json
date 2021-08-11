@@ -30,9 +30,7 @@
         "prettier": "2.3.2",
         "react-test-renderer": "^17.0.2"
     },
-    "keywords": [
-        "gatsby"
-    ],
+    "keywords": ["gatsby"],
     "license": "0BSD",
     "scripts": {
         "bl": "gatsby build",
