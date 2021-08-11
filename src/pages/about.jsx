@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 import Layout from '../components/layout'
@@ -14,20 +14,19 @@ const Container = styled.div`
   justify-content: center;
   color: gray;
 `
-const underline = css`
+const em__line = css`
   border: 2px solid #cde;
   padding: 0.5em 1em;
 `
 
-const SecondPage = () => (
+const AboutPage = () => (
   <Layout>
     <Container>
-      <Seo title='Page two' />
-      <h1 css={underline}>Hi from the second page</h1>
-      <p>Welcome to page 2</p>
-      <Link to='/'>Go back to the homepage</Link>
+      <Seo title='Page About' />
+      <h1 css={em__line}>Hi from the About page</h1>
+      <p>Welcome to About</p>
     </Container>
   </Layout>
 )
 
-export default SecondPage
+export default AboutPage
