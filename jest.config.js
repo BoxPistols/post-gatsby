@@ -1,3 +1,4 @@
+// TODO: Test Setting https://www.gatsbyjs.com/docs/how-to/testing/unit-testing/
 module.exports = {
 	transform: {
 		'^.+\\.jsx?$': `<rootDir>/jest-preprocess.js`,
