@@ -6,8 +6,12 @@ const Header = ({ siteTitle }) => (
   <header
     style={{
       // background: `rebeccapurple`,
-      background: `rgba(000, 000, 000, 0.9)`,
+      // background: `rgba(000, 000, 000, 0.9)`,
       marginBottom: `1.25rem`,
+      background: `#078dcae9`,
+      position: `sticky`,
+      top: 0,
+      zIndex: 2,
     }}
   >
     <div

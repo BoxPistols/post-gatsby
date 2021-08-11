@@ -29,7 +29,6 @@ const Layout = ({ children }) => {
 
   return (
     <React.Fragment>
-
       <div className={youtube}>
         <Iframe
           id='ytplayer'
@@ -47,7 +46,6 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 
       <DivEmContainer>
-
         <FooterEm>
           <p>
             <Link to='/page-2/'>Go to page 2</Link> /
@@ -55,15 +53,12 @@ const Layout = ({ children }) => {
             <Link to='/using-typescript/'>Go to "Using TypeScript"</Link>
           </p>
         </FooterEm>
-
         <DivEmInner>
           <MainEm>{children}</MainEm>
         </DivEmInner>
-
         {new Date().getFullYear()}, Built with
         <p className={gray}>{data.site.siteMetadata?.description}</p>
         <a href='https://www.gatsbyjs.com'>Gatsby</a>
-
       </DivEmContainer>
     </React.Fragment>
   )
@@ -77,7 +72,7 @@ Layout.propTypes = {
 export default Layout
 
 const DivEmContainer = styled.div`
-  margin: 0 ;
+  margin: 0;
 
   max-width: 100vw;
   padding: 0 1.0875rem 1.45rem;
@@ -85,13 +80,13 @@ const DivEmContainer = styled.div`
 
 const MainEm = styled.main`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
 `
 
 const DivEmInner = styled.div`
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1200px;
   padding: 0 1.0875rem 1.45rem;
 `
 
