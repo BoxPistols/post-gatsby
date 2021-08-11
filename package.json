@@ -35,13 +35,13 @@
     ],
     "license": "0BSD",
     "scripts": {
-        "build": "gatsby build",
-        "dev": "gatsby develop",
-        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-        "start": "npm run develop",
-        "serve": "gatsby serve",
-        "clean": "gatsby clean",
-        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" "
+        "bl": "gatsby build",
+        "dv": "gatsby develop",
+        "ft": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+        "st": "npm run develop",
+        "sv": "gatsby serve",
+        "cl": "gatsby clean",
+        "ts": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" "
     },
     "repository": {
         "type": "git",

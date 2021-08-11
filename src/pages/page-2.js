@@ -16,7 +16,7 @@ const Container = styled.div`
 `
 const underline = css`
     border: 2px solid #cde;
-    padding: .5em 1em;
+    padding: 0.5em 1em;
 `
 
 const SecondPage = () => (
@@ -24,7 +24,7 @@ const SecondPage = () => (
         <Container>
             <Seo title='Page two' />
             <h1 css={underline}>Hi from the second page</h1>
-            <p >Welcome to page 2</p>
+            <p>Welcome to page 2</p>
             <Link to='/'>Go back to the homepage</Link>
         </Container>
     </Layout>
