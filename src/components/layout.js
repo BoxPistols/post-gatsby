@@ -16,47 +16,47 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
 const DivEmContainer = styled.div`
-    margin: 0 auto;
-    max-width: 960px;
-    padding: 0 1.0875rem 1.45rem;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 1.0875rem 1.45rem;
 `
 const em__line = css`
-    border: 2px solid #cde;
-    padding: 2em;
+  border: 2px solid #cde;
+  padding: 2em;
 `
 
 const Layout = ({ children }) => {
-    const data = useStaticQuery(graphql`
-        query SiteTitleQuery {
-            site {
-                siteMetadata {
-                    title
-                }
-            }
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
         }
-    `)
+      }
+    }
+  `)
 
-    return (
-        <>
-            <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-            <DivEmContainer>
-                <main css={em__line}>{children}</main>
-                <footer
-                    style={{
-                        marginTop: `2rem`,
-                    }}
-                >
-                    © {new Date().getFullYear()}, Built with
-                    {` `}
-                    <a href='https://www.gatsbyjs.com'>Gatsby</a>
-                </footer>
-            </DivEmContainer>
-        </>
-    )
+  return (
+    <>
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <DivEmContainer>
+        <main css={em__line}>{children}</main>
+        <footer
+          style={{
+            marginTop: `2rem`,
+          }}
+        >
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href='https://www.gatsbyjs.com'>Gatsby</a>
+        </footer>
+      </DivEmContainer>
+    </>
+  )
 }
 
 Layout.propTypes = {
-    children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 }
 
 export default Layout
