@@ -14,7 +14,7 @@ const Container = styled.div`
     justify-content: center;
     color: gray;
 `
-const underline = css`
+const em__line = css`
     border: 2px solid #cde;
     padding: 0.5em 1em;
 `
@@ -23,7 +23,7 @@ const AboutPage = () => (
     <Layout>
         <Container>
             <Seo title='Page About' />
-            <h1 css={underline}>Hi from the About page</h1>
+            <h1 css={em__line}>Hi from the About page</h1>
             <p>Welcome to About</p>
             <Link to='/'>Go back to the homepage</Link>
         </Container>

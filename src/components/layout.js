@@ -12,6 +12,19 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import './layout.css'
 
+import styled from '@emotion/styled'
+import { css } from '@emotion/react'
+
+const DivEmContainer = styled.div`
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0 1.0875rem 1.45rem;
+`
+const em__line = css`
+    border: 2px solid #cde;
+    padding: 2em;
+`
+
 const Layout = ({ children }) => {
     const data = useStaticQuery(graphql`
         query SiteTitleQuery {
@@ -26,14 +39,8 @@ const Layout = ({ children }) => {
     return (
         <>
             <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-            <div
-                style={{
-                    margin: `0 auto`,
-                    maxWidth: 960,
-                    padding: `0 1.0875rem 1.45rem`,
-                }}
-            >
-                <main>{children}</main>
+            <DivEmContainer>
+                <main css={em__line}>{children}</main>
                 <footer
                     style={{
                         marginTop: `2rem`,
@@ -43,7 +50,7 @@ const Layout = ({ children }) => {
                     {` `}
                     <a href='https://www.gatsbyjs.com'>Gatsby</a>
                 </footer>
-            </div>
+            </DivEmContainer>
         </>
     )
 }
