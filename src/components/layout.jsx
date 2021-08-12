@@ -84,7 +84,7 @@ const MainEm = styled.main`
 
 const DivEmInner = styled.div`
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1440px;
   padding: 0 1.0875rem 1.45rem;
 `
 

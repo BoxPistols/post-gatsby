@@ -3,13 +3,125 @@ import { StaticImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 import styled from '@emotion/styled'
+import { css } from '@emotion/react'
 
+const IndexPage = () => (
+  <Layout>
+    <Seo title='Home' />
+    <H1Em>Hello Technology Creators</H1Em>
+    <p>Welcome to your new Gatsby site.</p>
+
+    <Box>
+      <ContentsList>
+        <div>
+          <StaticImage
+            css={em__inbox}
+            src='https://picsum.photos/800/1200/?image=851'
+            // src='../images/gatsby-astronaut.png'
+            width={400}
+            height={800}
+            quality={60}
+            formats={['AUTO', 'WEBP', 'AVIF']}
+            alt='A Gatsby astronaut'
+            style={{ opacity: 0.8 }}
+          />
+        </div>
+        <Contents />
+      </ContentsList>
+    </Box>
+    <Box>
+      <ContentsList>
+        <Contents />
+        <div>
+          <StaticImage
+            css={em__inbox}
+            src='https://picsum.photos/800/1200/?image=851'
+            // src='../images/gatsby-astronaut.png'
+            width={400}
+            height={800}
+            quality={60}
+            formats={['AUTO', 'WEBP', 'AVIF']}
+            alt='A Gatsby astronaut'
+            style={{ opacity: 0.8 }}
+          />
+        </div>
+      </ContentsList>
+    </Box>
+  </Layout>
+)
+
+export default IndexPage
+
+//  Style
 const Content = styled.div`
-  margin: 2em auto;
   background: rgb(11 22 32 / 60%);
   padding: 24px 32px;
 `
+const ContentsList = styled.div`
+  display: contents;
+`
+const Box = styled.div`
+  margin: 8vh auto 4vh;
+  background: rgb(180 122 132 / 60%);
+  padding: 24px 32px;
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 100%;
+  }
+`
+const em__inbox = css`
+  display: block;
+  height: 100%;
+  width: 100%;
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    /* opacity: .8!important; */
+    @media only screen and (max-width: 768px) {
+      max-height: 240px;
+    }
+  }
+`
+const H1Em = styled.h1`
+  position: relative;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  taxt-align: center;
+  opacity: 0.75;
+  font-size: calc(20px + 12vw);
+  @media only screen and (max-width: 768px) {
+    font-size: calc(24px + 8vw);
+  }
+  text-shadow: 2px 2px 2px #000;
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    left: -8%;
+    top: 0;
+    width: 80%;
+    height: 88%;
+    display: block;
+    background-color: rgb(170 180 30 / 90%);
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 6%;
+    top: 18%;
+    width: 98%;
+    height: 92%;
+    display: block;
+    background-color: rgb(11 182 226 / 85%);
+  }
+`
 
+// data
 export const Contents = () => (
   <Content>
     <h2>Est Et Distinctio Rerum Cumque</h2>
@@ -38,67 +150,3 @@ export const Contents = () => (
     </p>
   </Content>
 )
-
-const IndexPage = () => (
-  <Layout>
-    <Seo title='Home' />
-    <H1Em>Hello Technology Creators</H1Em>
-    <p>Welcome to your new Gatsby site.</p>
-
-    <Contents />
-    <Contents />
-    <Contents />
-    <Contents />
-    <Contents />
-    <Contents />
-    <StaticImage
-      src='https://picsum.photos/1200/800/?image=851'
-      // src='../images/gatsby-astronaut.png'
-      width={1200}
-      height={400}
-      quality={80}
-      formats={['AUTO', 'WEBP', 'AVIF']}
-      alt='A Gatsby astronaut'
-      style={{ marginBottom: `1.45rem` }}
-    />
-  </Layout>
-)
-
-export default IndexPage
-
-const H1Em = styled.h1`
-  position: relative;
-  color: white;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  taxt-align: center;
-  opacity: 0.75;
-  font-size: calc(20px + 12vw);
-  @media only screen and (max-width: 768px) {
-    font-size: calc(20px + 4vw);
-  }
-  text-shadow: 2px 2px 2px #000;
-  &:before {
-    content: '';
-    position: absolute;
-    z-index: -2;
-    left: -8%;
-    top: 0;
-    width: 80%;
-    height: 88%;
-    display: block;
-    background-color: rgb(170 180 30 / 90%);
-  }
-  &:after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    left: 8%;
-    top: 20%;
-    width: 88%;
-    height: 92%;
-    display: block;
-    background-color: rgb(11 182 226 / 85%);
-  }
-`
