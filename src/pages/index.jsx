@@ -22,8 +22,7 @@ const IndexPage = () => (
     <H1Em>Hello Technology Engineer!</H1Em>
     <p>Welcome to your new Gatsby site.</p>
 
-    {/*
-      <StaticImage
+    <StaticImage
       src='https://picsum.photos/1200/800/?image=851'
       // src='../images/gatsby-astronaut.png'
       width={1200}
@@ -32,8 +31,7 @@ const IndexPage = () => (
       formats={['AUTO', 'WEBP', 'AVIF']}
       alt='A Gatsby astronaut'
       style={{ marginBottom: `1.45rem` }}
-      />
-    */}
+    />
   </Layout>
 )
 

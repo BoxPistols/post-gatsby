@@ -7,6 +7,7 @@
 
 import * as React from 'react'
 import PropTypes from 'prop-types'
+import Iframe from 'react-iframe'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
@@ -29,15 +30,15 @@ const Layout = ({ children }) => {
   return (
     <React.Fragment>
       <div className={youtube}>
-        <iframe
+        <Iframe
           id='ytplayer'
           type='text/html'
           width='720'
           height='405'
-          src='https://www.youtube.com/embed/XdlmoLAbbiQ?autoplay=1'
+          src='https://www.youtube.com/embed/XdlmoLAbbiQ?autoplay=1&mute=1&controls=0&loop=1&playlist=XdlmoLAbbiQ'
           frameborder='0'
           allowfullscreen
-        ></iframe>
+        />
       </div>
 
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
