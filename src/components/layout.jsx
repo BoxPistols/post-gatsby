@@ -7,12 +7,13 @@
 
 import * as React from 'react'
 import PropTypes from 'prop-types'
+import Iframe from 'react-iframe'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import Header from './header'
 import './layout.css'
-import { gray } from './style/utility.module.css'
+import { gray, youtube } from './style/utility.module.css'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,6 +29,18 @@ const Layout = ({ children }) => {
 
   return (
     <React.Fragment>
+      <div className={youtube}>
+        <Iframe
+          id='ytplayer'
+          type='text/html'
+          width='720'
+          height='405'
+          src='https://www.youtube.com/embed/XdlmoLAbbiQ?autoplay=1&mute=1&controls=0&loop=1&playlist=XdlmoLAbbiQ'
+          frameborder='0'
+          allowfullscreen
+        />
+      </div>
+
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <DivEmContainer>
         <FooterEm>

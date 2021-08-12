@@ -4,10 +4,22 @@ import { StaticImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 
+import styled from '@emotion/styled'
+
+const H1Em = styled.h1`
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  taxt-align: center;
+  opacity: 0.3;
+  font-size: calc(32px + 8vw);
+`
+
 const IndexPage = () => (
   <Layout>
     <Seo title='Home' />
-    <h1>Hello Gatsby Development</h1>
+    <H1Em>Hello Technology Engineer!</H1Em>
     <p>Welcome to your new Gatsby site.</p>
 
     <StaticImage
