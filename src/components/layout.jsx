@@ -6,8 +6,8 @@
  */
 
 import * as React from 'react'
-import PropTypes from 'prop-types'
 import Iframe from 'react-iframe'
+import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
@@ -35,13 +35,14 @@ const Layout = ({ children }) => {
           type='text/html'
           width='720'
           height='405'
-          src='https://www.youtube.com/embed/XdlmoLAbbiQ?autoplay=1&mute=1&controls=0&loop=1&playlist=XdlmoLAbbiQ'
+          src='https://www.youtube.com/embed/XdlmoLAbbiQ?autoplay=1&mute=1&playsinline=1&loop=1&playlist=XdlmoLAbbiQ'
           frameborder='0'
-          allowfullscreen
+          allow='fullscreen'
         />
       </div>
 
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+
       <DivEmContainer>
         <FooterEm>
           <p>
@@ -69,14 +70,15 @@ Layout.propTypes = {
 export default Layout
 
 const DivEmContainer = styled.div`
-  margin: 0 auto;
+  margin: 0;
+
   max-width: 100vw;
   padding: 0 1.0875rem 1.45rem;
 `
 
 const MainEm = styled.main`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
 `
 
