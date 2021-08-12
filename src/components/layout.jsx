@@ -34,10 +34,8 @@ const Layout = ({ children }) => {
           id='ytplayer'
           type='text/html'
           width='720'
-          height='360'
+          height='405'
           src='https://www.youtube.com/embed/XdlmoLAbbiQ?autoplay=1&mute=1&playsinline=1&loop=1&playlist=XdlmoLAbbiQ'
-          // ?autoplay=1&mute=1&playsinline=1&loop=1
-          // ?loop=1&playlist=XdlmoLAbbiQ
           frameborder='0'
           allow='fullscreen'
         />

@@ -45,24 +45,22 @@ const IndexPage = () => (
     <H1Em>Hello Technology Creators</H1Em>
     <p>Welcome to your new Gatsby site.</p>
 
-    {/*
-		<StaticImage
-			src='https://picsum.photos/1200/800/?image=851'
-			// src='../images/gatsby-astronaut.png'
-			width={800}
-			height={600}
-			quality={80}
-			formats={[ 'AUTO', 'WEBP', 'AVIF' ]}
-			alt='A Gatsby astronaut'
-			style={{ marginBottom: `1.45rem`, opacity: `0.85` }}
-		/>
-*/}
     <Contents />
     <Contents />
     <Contents />
     <Contents />
     <Contents />
     <Contents />
+    <StaticImage
+      src='https://picsum.photos/1200/800/?image=851'
+      // src='../images/gatsby-astronaut.png'
+      width={1200}
+      height={400}
+      quality={80}
+      formats={['AUTO', 'WEBP', 'AVIF']}
+      alt='A Gatsby astronaut'
+      style={{ marginBottom: `1.45rem` }}
+    />
   </Layout>
 )
 
