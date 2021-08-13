@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Link } from 'gatsby'
+
 import styled from '@emotion/styled'
 import Header from './header'
 import './layout.css'
@@ -21,18 +21,11 @@ const Layout = ({ children }) => {
 
     return (
         <React.Fragment>
-            <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-            <NavEm>
-                <p>
-                    <Link to='/page-2/'>Go to page 2</Link> /
-                    <Link to='/about/'>Go to About</Link> /
-                    <Link to='/using-typescript/'>
-                        Go to "Using TypeScript"
-                    </Link>
-                </p>
-            </NavEm>
             <DivEmContainer>
                 <DivEmInner>
+                    <Header
+                        siteTitle={data.site.siteMetadata?.title || `Title`}
+                    />
                     <MainEm>{children}</MainEm>
                 </DivEmInner>
                 <footer>
@@ -54,21 +47,22 @@ Layout.propTypes = {
 
 export default Layout
 
-const NavEm = styled.footer`
-    margin: 0;
-`
-
 const DivEmContainer = styled.div`
     margin: 0 auto;
     width: 100vw;
+    min-height: 200vh;
+    max-width: 1200px;
 `
 
 const MainEm = styled.main`
+    margin: auto;
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
+    justify-content: flex-center;
+    align-items: center;
 `
 
 const DivEmInner = styled.div`
     width: 100%;
+    padding: 0;
 `
