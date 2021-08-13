@@ -5,14 +5,15 @@ import { Link } from 'gatsby'
 const Header = ({ siteTitle }) => (
     <header
         style={{
-            // background: `rebeccapurple`,
-            background: `#234`,
             marginBottom: `1.25rem`,
+            position: `sticky`,
+            top: 0,
+            zIndex: 2,
+            background: `#234`,
         }}
     >
         <div
             style={{
-                // margin: `0 auto`,
                 maxWidth: 1200,
                 padding: `1.25rem 1.0875rem`,
             }}
