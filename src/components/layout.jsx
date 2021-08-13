@@ -1,11 +1,10 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
-
 import styled from '@emotion/styled'
 import Header from './header'
-import './layout.css'
-import { gray } from './style/utility.module.css'
+import { gray } from './style/utility.module.scss'
+import './layout.scss'
 
 const Layout = ({ children }) => {
     const data = useStaticQuery(graphql`
@@ -40,12 +39,14 @@ const Layout = ({ children }) => {
     )
 }
 
-/* ===== Style ===== */
+export default Layout
+
+/* ===== propTypes ===== */
 Layout.propTypes = {
     children: PropTypes.node.isRequired,
 }
 
-export default Layout
+/* ===== Style ===== */
 
 const DivEmContainer = styled.div`
     margin: 0 auto;
