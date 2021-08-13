@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Iframe from 'react-iframe'
-import { youtube } from './style/utility.module.css'
+import { youtube } from './style/utility.module.scss'
 
 export const Video = () => {
     const url = `https://www.youtube.com/embed/MLCSfwHLCwA?autoplay=1&mute=1&controls=0&loop=1&start=12&playlist=MLCSfwHLCwA`
