@@ -22,18 +22,16 @@ const IndexPage = () => (
             style={{ marginBottom: `1.45rem` }}
         />
     </Layout>
-
+)
 export default IndexPage
 
 // Style
 const H1Em = styled.h1`
-	color: white;
-	display: flex;
-	justify-content: flex-start;
-	flex-direction: column;
-	taxt-align: center;
-	opacity: 0.3;
-	font-size: calc(32px + 8vw);
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    taxt-align: center;
+    opacity: 0.3;
+    font-size: calc(32px + 8vw);
 `
-
-
