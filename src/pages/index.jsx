@@ -5,12 +5,13 @@ import Seo from '../components/seo'
 import styled from '@emotion/styled'
 import { Video } from '../components/video'
 const IndexPage = () => (
-    <Layout>
-        <Seo title='Home' />
-        <H1Em>Hello Technology Engineer!</H1Em>
-        <p>Welcome to your new Gatsby site.</p>
+    <>
         <Video />
-        {/*
+        <Layout>
+            <Seo title='Home' />
+            <H2Em>Hello Technology Engineer!</H2Em>
+            <p>Welcome to your new Gatsby site.</p>
+            {/*
             <StaticImage
                 src='../images/city.jpg'
                 width={1200}
@@ -21,17 +22,20 @@ const IndexPage = () => (
                 style={{ marginBottom: `1.45rem` }}
             />
         */}
-    </Layout>
+        </Layout>
+    </>
 )
 export default IndexPage
 
 // Style
-const H1Em = styled.h1`
-    color: white;
+const H2Em = styled.h2`
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-center;
     flex-direction: column;
     taxt-align: center;
+    padding-top: 15%;
+    color: white;
     opacity: 0.3;
     font-size: calc(32px + 8vw);
+    text-shadow: 2px 2px 2px #333;
 `
