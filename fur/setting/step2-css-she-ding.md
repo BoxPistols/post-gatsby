@@ -1,25 +1,25 @@
 ---
 description: >-
-  https://github.com/BoxPistols/gatsby-dev ->
-  https://github.com/BoxPistols/post-gatsby
+    https://github.com/BoxPistols/gatsby-dev ->
+    https://github.com/BoxPistols/post-gatsby
 ---
 
-# Step2 CSS設定
+# Step2 CSS 設定
 
-## CSS設定
+## CSS 設定
 
 ### Emotion
 
-* ※Emotion CSSは不具合あり、代替=CSS Module
-  * Emotionはstyledをメインにする
+-   ※Emotion CSS は不具合あり、代替=CSS Module
+    -   Emotion は styled をメインにする
 
 ### 開発環境切り替え
 
-* VercelからのPullはエラーがあるため、ローカルでGatsby CLI再構築
+-   Vercel からの Pull はエラーがあるため、ローカルで Gatsby CLI 再構築
 
 [https://github.com/BoxPistols/post-gatsby](https://github.com/BoxPistols/post-gatsby)
 
-### 
+###
 
 ### [Emotion](https://www.gatsbyjs.com/docs/how-to/styling/emotion/) :Re
 
@@ -34,4 +34,3 @@ module.exports = {
 ```
 
 ↑ Deploy / CSS / Build / ALL OK!!
-
