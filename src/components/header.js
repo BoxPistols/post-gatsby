@@ -6,10 +6,10 @@ const Header = ({ siteTitle }) => (
     <header
         style={{
             marginBottom: `1.25rem`,
-            background: `#078dcae9`,
             position: `sticky`,
             top: 0,
             zIndex: 2,
+            background: `#234`,
         }}
     >
         <div

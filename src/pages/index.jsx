@@ -1,21 +1,9 @@
 import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-
 import Layout from '../components/layout'
 import Seo from '../components/seo'
-
 import styled from '@emotion/styled'
 import { Video } from '../components/video'
-
-const H1Em = styled.h1`
-    color: white;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    taxt-align: center;
-    opacity: 0.3;
-    font-size: calc(32px + 8vw);
-`
 
 const IndexPage = () => (
     <Layout>
@@ -34,6 +22,18 @@ const IndexPage = () => (
             style={{ marginBottom: `1.45rem` }}
         />
     </Layout>
-)
 
 export default IndexPage
+
+// Style
+const H1Em = styled.h1`
+	color: white;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	taxt-align: center;
+	opacity: 0.3;
+	font-size: calc(32px + 8vw);
+`
+
+
