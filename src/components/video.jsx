@@ -1,6 +1,5 @@
 import * as React from 'react'
 import Iframe from 'react-iframe'
-import './layout.css'
 import { youtube } from './style/utility.module.css'
 
 export const Video = () => {
