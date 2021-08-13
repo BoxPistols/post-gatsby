@@ -11,7 +11,7 @@ function Nav () {
     )
 }
 
-export default nav
+export default Nav
 
 /* ===== Style ===== */
 
