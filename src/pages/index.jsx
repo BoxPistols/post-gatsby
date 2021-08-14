@@ -12,7 +12,7 @@ const IndexPage = () => (
             <Seo title='Home' />
             <H2Em>Hello Technology Engineer!</H2Em>
             <p>Welcome to your new Gatsby site.</p>
-            <Card />
+            <Card title='このたいとる' />
             <Card />
             <Card />
         </Layout>
