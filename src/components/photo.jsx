@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { css } from '@emotion/react'
-export default function Photo() {
+export const Photo = () => {
     return (
         <>
             <StaticImage
@@ -20,5 +20,6 @@ export default function Photo() {
 
 /* ===== Style ===== */
 const em__photo = css`
+    overflow: visible;
     opacity: 0.85;
 `
