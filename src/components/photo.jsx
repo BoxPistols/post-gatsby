@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { css } from '@emotion/react'
-export default function Photo () {
+export default function Photo() {
     return (
         <>
             <StaticImage
