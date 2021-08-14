@@ -52,7 +52,6 @@ const DivEmContainer = styled.div`
     margin: 0 auto;
     width: 100vw;
     min-height: 200vh;
-    max-width: 1200px;
 `
 
 const MainEm = styled.main`
@@ -61,6 +60,7 @@ const MainEm = styled.main`
     flex-direction: column;
     justify-content: flex-center;
     align-items: center;
+    max-width: 1200px;
 `
 
 const DivEmInner = styled.div`

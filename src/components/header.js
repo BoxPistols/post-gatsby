@@ -1,25 +1,13 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import Nav from './nav'
+import { css } from '@emotion/react'
 
 const Header = ({ siteTitle }) => (
-    <header
-        style={{
-            background: `#234`,
-            marginBottom: `1.25rem`,
-            position: `sticky`,
-            top: 0,
-            zIndex: 2,
-            background: `#234`,
-        }}
-    >
-        <div
-            style={{
-                maxWidth: 1200,
-                padding: `1.25rem 1.0875rem`,
-            }}
-        >
-            <h1 style={{ margin: 0, fontWeight: 300, fontSize: 24 }}>
+    <header css={em__header}>
+        <div>
+            <h1 css={em__h1}>
                 <Link
                     to='/'
                     style={{
@@ -30,9 +18,29 @@ const Header = ({ siteTitle }) => (
                     {siteTitle}
                 </Link>
             </h1>
+            <Nav />
         </div>
     </header>
 )
+export default Header
+
+/* ===== Style ====== */
+
+const em__header = css`
+    position: sticky;
+    top: 0;
+    zindex: 2;
+    padding: 1em;
+    background: #234;
+    > div {
+        display: flex;
+    }
+`
+
+const em__h1 = css`
+    font-size: 1.25em;
+    margin: 0 1em 0 0;
+`
 
 Header.propTypes = {
     siteTitle: PropTypes.string,
@@ -41,5 +49,3 @@ Header.propTypes = {
 Header.defaultProps = {
     siteTitle: ``,
 }
-
-export default Header

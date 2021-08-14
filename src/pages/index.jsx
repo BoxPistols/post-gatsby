@@ -1,9 +1,10 @@
 import * as React from 'react'
-// import { StaticImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 import styled from '@emotion/styled'
 import { Video } from '../components/video'
+import Photo from '../components/photo'
+import { Card } from '../components/card'
 const IndexPage = () => (
     <>
         <Video />
@@ -11,23 +12,16 @@ const IndexPage = () => (
             <Seo title='Home' />
             <H2Em>Hello Technology Engineer!</H2Em>
             <p>Welcome to your new Gatsby site.</p>
-            {/*
-            <StaticImage
-                src='../images/city.jpg'
-                width={1200}
-                height={400}
-                quality={80}
-                formats={['AUTO', 'WEBP', 'AVIF']}
-                alt='A Gatsby astronaut'
-                style={{ marginBottom: `1.45rem` }}
-            />
-        */}
+            <Card />
+            <Card />
+            <Card />
         </Layout>
     </>
 )
 export default IndexPage
 
-// Style
+/* ===== Style ===== */
+
 const H2Em = styled.h2`
     display: flex;
     justify-content: flex-center;
