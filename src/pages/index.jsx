@@ -3,8 +3,8 @@ import Layout from '../components/layout'
 import Seo from '../components/seo'
 import styled from '@emotion/styled'
 import { Video } from '../components/video'
-import Photo from '../components/photo'
 import { Card } from '../components/card'
+
 const IndexPage = () => (
     <>
         <Video />
