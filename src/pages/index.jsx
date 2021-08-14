@@ -4,6 +4,7 @@ import Seo from '../components/seo'
 import styled from '@emotion/styled'
 import { Video } from '../components/video'
 import Photo from '../components/photo'
+import { Card } from '../components/card'
 const IndexPage = () => (
     <>
         <Video />
@@ -11,10 +12,9 @@ const IndexPage = () => (
             <Seo title='Home' />
             <H2Em>Hello Technology Engineer!</H2Em>
             <p>Welcome to your new Gatsby site.</p>
-            <Photo />
-            <Photo />
-            <Photo />
-            <Photo />
+            <Card />
+            <Card />
+            <Card />
         </Layout>
     </>
 )
