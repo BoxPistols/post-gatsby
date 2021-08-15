@@ -1,82 +1,66 @@
 /**
- * example Code
- * https://gist.github.com/BoxPistols/5340bc889eda7699339ca26e28fbc1e5
- *
+ * example Code https://shrtm.nu/WuPl
  */
-// font-size: px to rem Auto Calc
+
+/* ===== px to rem auto-calc ===== */
+// font-size
 export const fz = (px) => {
     /* if html element has font-size get root fontSize
      * => const fontSize = getComputedStyle( document.documentElement).fontSize
      */
     const fontSize = getComputedStyle(document.querySelector('body')).fontSize
-    console.log(fontSize)
     // calc for px to rem
     const fzCalc = px / parseFloat(fontSize)
     // ブラウザ依存による小数点の表示桁数
     const fzNum = parseFloat(fzCalc.toFixed(2))
     return `font-size:` + fzNum + 'rem'
 }
-
-// Common Size Calc for px-to-rem
+// global size
 export const size = (px) => {
     const fontSize = getComputedStyle(document.querySelector('body')).fontSize
-    console.log(fontSize)
     // calc for px to rem
     const sizeCalc = px / parseFloat(fontSize)
     const sizeNum = parseFloat(sizeCalc.toFixed(2))
     return sizeNum + 'rem'
 }
 
+/* ===== Flex-Box ====== */
 // Mixin
 export const fx_center = () => {
     return `
     display: flex;
     align-items: center;
     justify-content: center;
-`
+    `
 }
 
-export const tx_center = () => {
-    return `
-    text-align: center;
-`
+// flex
+export const fx = `display: flex;`
+
+/* ===== text ====== */
+// Mixin
+export const tx = (x) => {
+    return `text-align: ${x}`
 }
 
-// bg-color
-export const bgc = (bgColor) => {
-    return `
-    background-color: ${bgColor};
-`
-}
-
-// color
-export const color = (c) => {
-    return `
-    color: ${c};
-`
-}
-
-// ui function
+/* ===== Grid ====== */
 export const grid = (col_start, col_end, row_start, row_end) => {
     return `
     // TODO: if IE = for IE AutoPrefix
     grid-column: ${col_start} / ${col_end}; // Horizontal ↑↓
     grid-row: ${row_start} / ${row_end}; // Vertical ←→
-`
+    `
 }
 
-// UI Component
-export const block = {
-    db: `display: block;`,
-    df: `display: flex;`,
-    dg: `display: grid;`,
-}
-
-// UI Component
+/* ===== Color ===== */
+//  global color
 export const c = {
     main: 'tomato',
     accent: 'teal',
-    dark: 'demigray',
+    dark: 'dimgray',
+    ghost: 'ghostwhite',
+    white: 'white',
+    black: 'black',
 
     gray: {
         __50: `#fafafa`,
@@ -91,3 +75,34 @@ export const c = {
         __900: `#212121`,
     },
 }
+// color
+export const color = (c) => {
+    return `
+    color: ${c};
+    `
+}
+// bg-color
+export const bgc = (bgColor) => {
+    return `
+    background-color: ${bgColor};
+    `
+}
+
+// border
+export const bdc = (bdColor) => {
+    return `
+    border: 1px solid ${bdColor};
+    `
+}
+
+// opacity
+export const opacity = `opacity: 0.85;`
+
+/* ===== Break Point===== */
+export const mq = (x) => {
+    return `@media only screen and (max-width: 768px) {
+        ${x}
+    }`
+}
+
+/* ===== Spacing ===== */

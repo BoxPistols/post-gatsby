@@ -7,9 +7,9 @@ export const Photo = () => {
             <StaticImage
                 css={em__photo}
                 src='../images/city.jpg'
-                width={1200}
-                height={400}
-                quality={80}
+                width={720}
+                height={480}
+                quality={70}
                 formats={['AUTO', 'WEBP', 'AVIF']}
                 alt='A Gatsby astronaut'
                 style={{ marginBottom: `1.45rem` }}

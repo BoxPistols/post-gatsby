@@ -4,7 +4,7 @@ html {
     font: 112.5%/1.45em georgia, serif, sans-serif;
     overflow-y: scroll;
     box-sizing: border-box;
-    background-color: #000;
+    background-color: ghostwhite;
     z-index: 0;
 }
 body {
@@ -17,7 +17,7 @@ body {
     word-wrap: break-word;
     font-kerning: normal;
     font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-    color: ghostwhite;
+    color: darken(dimgray, 8%);
 }
 article,
 aside,

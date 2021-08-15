@@ -1,13 +1,18 @@
 import * as React from 'react'
 import { css } from '@emotion/react'
 import { Photo } from './photo'
+import * as ui from '../components/style/ui'
+import * as mod from './style/style.module.scss'
+
 export const Card = (props) => {
     return (
-        <div className='card__org' css={em__card_org}>
-            <div className='card' css={em__card_mol}>
+        <div classname={'card__org'} css={em__card_org}>
+            <div
+                className={`card_mol ${mod.mg_x16} ${mod.mg_y24}`}
+                css={em__card_mol}
+            >
                 <div className='card_img' css={em__card_img}>
                     <Photo />
-                    {/* <div className='card_img_caption'>caption</div> */}
                 </div>
                 <div className='card' css={em__card_content}>
                     {props.title ? (
@@ -18,10 +23,24 @@ export const Card = (props) => {
                         ''
                     )}
 
-                    <div className='em__card__sub-title'>sub</div>
-                    <div className='em__card__text'>text</div>
-                    <div className='em__card__link'>link</div>
-                    <div className='em__card__date'>date</div>
+                    {props.sub_title ? (
+                        <div css={em__card__sub_title}>
+                            <p>{props.sub_title}</p>
+                        </div>
+                    ) : (
+                        ''
+                    )}
+
+                    {props.text ? (
+                        <div className='em__card__text'>{props.text}</div>
+                    ) : (
+                        ''
+                    )}
+
+                    <div className={mod.mg_y12}></div>
+
+                    <div className='em__card__link'>https://google.com</div>
+                    <div className='em__card__date'>21-08-16</div>
                 </div>
             </div>
         </div>
@@ -30,54 +49,53 @@ export const Card = (props) => {
 
 /* ===== Style ===== */
 
-const mq = (x) => {
-    return `@media only screen and (max-width: 768px) {
-    ${x}
-    }`
-}
+//  has gatsby-image spacing
+const space_img = '1.45rem'
 
 const em__card_org = css`
-    display: flex;
+    * {
+        margin-bottom: 0;
+    }
+    .card {
+        padding: 0;
+        margin: 0 0 0 1.45rem;
+        padding-bottom: ${space_img};
+    }
+    img {
+        ${ui.mq('margin: 0')};
+    }
     &:nth-child(odd) {
-        img {
-            border: 2px solid teal;
-            margin: 0 1.45rem 0 0;
-            ${mq('margin: 0')}
+        .card {
+            margin: 0 0 0 ${space_img};
+            ${ui.mq('margin: 0')};
         }
     }
     &:nth-child(even) {
-        .card {
+        .card_mol {
             flex-direction: row-reverse;
         }
-        img {
-            border: 2px solid tomato;
-            margin: 0 0 0 1.45rem;
-            ${mq('margin: 0')}
+        .card {
+            margin: 0 ${space_img} 0 0;
+            ${ui.mq('margin: 0')};
+            /* order: -1; */
         }
+        /* img { */
+        /* order: 1; */
+        /* } */
     }
 `
 
-const em__card_mol = css`
-    /* max-width: 33%; */
-    margin: 24px 0;
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    color: ghostwhite;
-    padding: 1.45rem;
-    padding-bottom: 0;
-    background-color: #123;
-    opacity: 0.85;
-     {
-        /* @media only screen and (max-width: 768px) {
-        display: block;
-    } */
-    }
-    ${mq('display: block')}
-`
+export const em__card_mol = css`
+    ${ui.mq('display: block')};
+    ${ui.fx};
+    ${ui.bdc(ui.c.dark)};
+    /* ${ui.color(ui.c.ghost)}; */
+    /* ${ui.bgc(ui.c.dim)} */
+    padding: ${space_img} ${space_img} 0;
+    `
 const em__card_img = css`
-    margin-right: 1.45rem;
-    max-width: 50%;
+    max-width: 30%;
+    /* ${ui.opacity}; */
     @media only screen and (max-width: 768px) {
         max-width: 100%;
     }
@@ -91,5 +109,11 @@ const em__card_content = css`
     align-self: start;
 `
 const em__card__title = css`
-    color: tomato;
+    h3 {
+        margin: -0.45em 0 0 0;
+        line-height: 1.875em;
+    }
+`
+const em__card__sub_title = css`
+    ${ui.color(ui.c.gray.__400)};
 `
