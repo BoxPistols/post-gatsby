@@ -34,12 +34,13 @@ export const fx_center = () => {
     `
 }
 
+// flex
+export const fx = `display: flex;`
+
 /* ===== text ====== */
 // Mixin
-export const tx_center = () => {
-    return `
-    text-align: center;
-    `
+export const tx = (x) => {
+    return `text-align: ${x}`
 }
 
 /* ===== Grid ====== */
@@ -48,14 +49,7 @@ export const grid = (col_start, col_end, row_start, row_end) => {
     // TODO: if IE = for IE AutoPrefix
     grid-column: ${col_start} / ${col_end}; // Horizontal ↑↓
     grid-row: ${row_start} / ${row_end}; // Vertical ←→
-`
-}
-
-// UI Component
-export const block = {
-    db: `display: block;`,
-    df: `display: flex;`,
-    dg: `display: grid;`,
+    `
 }
 
 /* ===== Color ===== */
@@ -63,7 +57,10 @@ export const block = {
 export const c = {
     main: 'tomato',
     accent: 'teal',
-    dark: 'demigray',
+    dark: 'dimgray',
+    ghost: 'ghostwhite',
+    white: 'white',
+    black: 'black',
 
     gray: {
         __50: `#fafafa`,
@@ -82,19 +79,30 @@ export const c = {
 export const color = (c) => {
     return `
     color: ${c};
-`
+    `
 }
 // bg-color
 export const bgc = (bgColor) => {
     return `
     background-color: ${bgColor};
-`
+    `
 }
+
+// border
+export const bdc = (bdColor) => {
+    return `
+    border: 1px solid ${bdColor};
+    `
+}
+
+// opacity
+export const opacity = `opacity: 0.85;`
 
 /* ===== Break Point===== */
-
 export const mq = (x) => {
     return `@media only screen and (max-width: 768px) {
-    ${x}
+        ${x}
     }`
 }
+
+/* ===== Spacing ===== */
