@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { css } from '@emotion/react'
 import { Photo } from './photo'
+import * as ui from '../components/style/ui'
+
 export const Card = (props) => {
     return (
         <div className='card__org' css={em__card_org}>
@@ -30,11 +32,11 @@ export const Card = (props) => {
 
 /* ===== Style ===== */
 
-const mq = (x) => {
-    return `@media only screen and (max-width: 768px) {
-    ${x}
-    }`
-}
+// const mq = (x) => {
+//     return `@media only screen and (max-width: 768px) {
+//     ${x}
+//     }`
+// }
 
 const em__card_org = css`
     display: flex;
@@ -42,7 +44,7 @@ const em__card_org = css`
         img {
             border: 2px solid teal;
             margin: 0 1.45rem 0 0;
-            ${mq('margin: 0')}
+            ${ui.mq('margin: 0')};
         }
     }
     &:nth-child(even) {
@@ -52,7 +54,7 @@ const em__card_org = css`
         img {
             border: 2px solid tomato;
             margin: 0 0 0 1.45rem;
-            ${mq('margin: 0')}
+            ${ui.mq('margin: 0')};
         }
     }
 `
@@ -73,7 +75,7 @@ const em__card_mol = css`
         display: block;
     } */
     }
-    ${mq('display: block')}
+    ${ui.mq('display: block')};
 `
 const em__card_img = css`
     margin-right: 1.45rem;
