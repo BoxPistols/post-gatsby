@@ -27,13 +27,13 @@ const Layout = ({ children }) => {
                     />
                     <MainEm>{children}</MainEm>
                 </DivEmInner>
-                <footer>
+                <nav>
                     {new Date().getFullYear()}, Built with
                     <p className={gray}>
                         {data.site.siteMetadata?.description}
                     </p>
                     <a href='https://www.gatsbyjs.com'>Gatsby</a>
-                </footer>
+                </nav>
             </DivEmContainer>
         </React.Fragment>
     )
@@ -50,7 +50,7 @@ Layout.propTypes = {
 
 const DivEmContainer = styled.div`
     margin: 0 auto;
-    width: 100vw;
+    width: 100%;
     min-height: 200vh;
 `
 
@@ -61,6 +61,7 @@ const MainEm = styled.main`
     justify-content: flex-center;
     align-items: center;
     max-width: 1200px;
+    padding: 24px;
 `
 
 const DivEmInner = styled.div`
