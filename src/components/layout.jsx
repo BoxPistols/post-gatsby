@@ -2,7 +2,9 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
+import { css } from '@emotion/react'
 import Header from './header'
+import * as ui from '../components/style/ui'
 import { gray } from './style/utility.module.scss'
 import './layout.scss'
 
@@ -27,13 +29,14 @@ const Layout = ({ children }) => {
                     />
                     <MainEm>{children}</MainEm>
                 </DivEmInner>
-                <nav>
-                    {new Date().getFullYear()}, Built with
+                <footer css={em__footer}>
+                    {new Date().getFullYear()}-{new Date().getMonth() + 1}-
+                    {new Date().getDate()}, Built with
                     <p className={gray}>
                         {data.site.siteMetadata?.description}
                     </p>
                     <a href='https://www.gatsbyjs.com'>Gatsby</a>
-                </nav>
+                </footer>
             </DivEmContainer>
         </React.Fragment>
     )
@@ -47,6 +50,11 @@ Layout.propTypes = {
 }
 
 /* ===== Style ===== */
+const em__footer = css`
+    margin-top: 24px;
+    ${ui.fx_center()};
+    flex-direction: column;
+`
 
 const DivEmContainer = styled.div`
     margin: 0 auto;

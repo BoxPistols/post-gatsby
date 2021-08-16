@@ -6,9 +6,13 @@ import * as mod from './style/style.module.scss'
 
 export const Card = (props) => {
     return (
-        <div classname={'card__org'} css={em__card_org}>
+        <div className={'card__org'} css={em__card_org}>
             <div
-                className={`card_mol ${mod.mg_x16} ${mod.mg_y24}`}
+                className={
+                    props.not_reverse
+                        ? `card_mol__not-reverse ${mod.mg_x16} ${mod.mg_y24}`
+                        : `card_mol ${mod.mg_x16} ${mod.mg_y24}`
+                }
                 css={em__card_mol}
             >
                 <div className='card_img' css={em__card_img}>
@@ -64,34 +68,41 @@ const em__card_org = css`
     img {
         ${ui.mq('margin: 0')};
     }
-    &:nth-child(odd) {
+    &:nth-of-type(odd) {
         .card {
             margin: 0 0 0 ${space_img};
             ${ui.mq('margin: 0')};
         }
     }
-    &:nth-child(even) {
+    &:nth-of-type(even) {
         .card_mol {
             flex-direction: row-reverse;
+        }
+        /* if not_reverse='true' */
+        .card_mol__not-reverse {
+            /* ${ui.bdc('red')}; // debug */
+            .card {
+                margin: 0 0 0 ${space_img};
+                ${ui.mq('margin: 0')};
+            }
+
         }
         .card {
             margin: 0 ${space_img} 0 0;
             ${ui.mq('margin: 0')};
             /* order: -1; */
         }
-        /* img { */
-        /* order: 1; */
-        /* } */
     }
 `
 
 export const em__card_mol = css`
     ${ui.mq('display: block')};
     ${ui.fx};
-    ${ui.bdc(ui.c.dark)};
+    ${ui.bdc(ui.c.gray.__200)};
     /* ${ui.color(ui.c.ghost)}; */
     /* ${ui.bgc(ui.c.dim)} */
     padding: ${space_img} ${space_img} 0;
+    box-shadow: 2px 2px 12px ${ui.c.gray.__300};
     `
 const em__card_img = css`
     max-width: 30%;
