@@ -8,6 +8,7 @@
         "@emotion/react": "^11.4.1",
         "@emotion/styled": "^11.3.0",
         "gatsby": "^3.11.1",
+        "gatsby-background-image": "^1.5.3",
         "gatsby-plugin-emotion": "^6.11.0",
         "gatsby-plugin-gatsby-cloud": "^2.11.0",
         "gatsby-plugin-image": "^1.11.0",
