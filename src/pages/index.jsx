@@ -4,13 +4,15 @@ import Seo from '../components/seo'
 import styled from '@emotion/styled'
 // import { Video } from '../components/video'
 import { Card } from '../components/card'
+import { Hero } from '../components/hero'
 
 const IndexPage = () => (
     <>
         {/* <Video /> */}
+        <Hero />
         <Layout>
             <Seo title='Home' />
-            <H2Em>Hello Technology Heroes</H2Em>
+            <H2Em>Technology Heroes</H2Em>
             <p>Welcome to your new Gatsby site.</p>
             <Card
                 title='Quibusdam Perferendis Neque Fugit Qui'
