@@ -29,7 +29,7 @@ export default Header
 const em__header = css`
     position: sticky;
     top: 0;
-    zindex: 2;
+    z-index: 2;
     padding: 1em;
     background: #234;
     > div {
