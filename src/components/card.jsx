@@ -92,11 +92,11 @@ const em__card_org = css`
 export const em__card_mol = css`
     ${ui.mq('display: block')};
     ${ui.fx};
-    ${ui.bdc(ui.c.gray.__200)};
-    /* ${ui.color(ui.c.ghost)}; */
-    /* ${ui.bgc(ui.c.dim)} */
+    ${ui.bdc(ui.c.gray.__300)};
+    background-color: #ffffff2e;
     padding: ${space_img} ${space_img} 0;
-    box-shadow: 2px 2px 12px ${ui.c.gray.__300};
+    border-radius: 12px;
+    /* box-shadow: 2px 2px 2px ${ui.c.gray.__300}; */
 `
 const em__card_img = css`
     max-width: 30%;
