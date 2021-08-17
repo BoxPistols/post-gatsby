@@ -41,7 +41,7 @@ export const Card = (props) => {
                         ''
                     )}
 
-                    <div className={mod.mg_y12}></div>
+                    <div className={mod.mg_y12} />
 
                     <div className='em__card__link'>https://google.com</div>
                     <div className='em__card__date'>21-08-16</div>
@@ -85,12 +85,6 @@ const em__card_org = css`
                 margin: 0 0 0 ${space_img};
                 ${ui.mq('margin: 0')};
             }
-
-        }
-        .card {
-            margin: 0 ${space_img} 0 0;
-            ${ui.mq('margin: 0')};
-            /* order: -1; */
         }
     }
 `
@@ -103,7 +97,7 @@ export const em__card_mol = css`
     /* ${ui.bgc(ui.c.dim)} */
     padding: ${space_img} ${space_img} 0;
     box-shadow: 2px 2px 12px ${ui.c.gray.__300};
-    `
+`
 const em__card_img = css`
     max-width: 30%;
     /* ${ui.opacity}; */
