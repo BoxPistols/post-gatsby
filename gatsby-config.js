@@ -16,6 +16,9 @@ module.exports = {
                 name: `images`,
                 path: `${__dirname}/src/images`,
             },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
             options: {
                 name: `posts`,
                 path: `${__dirname}/src/posts`,
@@ -25,10 +28,6 @@ module.exports = {
         {
             resolve: `gatsby-transformer-remark`,
             options: {
-                commonmark: true,
-                footnotes: true,
-                pedantic: true,
-                gfm: true,
                 plugins: [
                     {
                         resolve: 'gatsby-remark-relative-images',

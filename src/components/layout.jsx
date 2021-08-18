@@ -5,7 +5,6 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 import Header from './header'
 import * as ui from '../components/style/ui'
-import { white } from './style/utility.module.scss'
 import './layout.scss'
 
 const Layout = ({ children }) => {
@@ -32,7 +31,7 @@ const Layout = ({ children }) => {
                 <footer css={em__footer}>
                     {new Date().getFullYear()}-{new Date().getMonth() + 1}-
                     {new Date().getDate()}, Built with
-                    <p className={white}>
+                    <p>
                         {data.site.siteMetadata?.description}
                         <span css={em__link}>
                             &nbsp;on&nbsp;
