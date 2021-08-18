@@ -2,11 +2,11 @@
 title: 'title 1'
 date: '2021-08-18'
 slug: 'post-1'
-thumbnail: '../images/city.jpg'
+thumbnail: './windmill.jpg'
 ---
 
-Gatsby Post 001
-![Sample](../images/city.jpg)
+Blog です
+![Sample](./windmill.jpg)
 
 ## topic
 
