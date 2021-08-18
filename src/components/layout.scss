@@ -11,13 +11,15 @@ body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    letter-spacing: auto;
     /* color: hsla(0, 0%, 0%, 0.8); */
     // font-family: georgia, serif;
     font-weight: normal;
     word-wrap: break-word;
     font-kerning: normal;
     font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-    color: lighten(dimgray, 4%);
+    color: darken(dimgray, 12%);
+    text-shadow: 1px 0px 1px #00000033;
 }
 article,
 aside,

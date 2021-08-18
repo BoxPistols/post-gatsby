@@ -53,7 +53,7 @@ export const Card = (props) => {
 
 /* ===== Style ===== */
 
-//  has gatsby-image spacing
+//  Gatsby has default image spacing size
 const space_img = '1.45rem'
 
 const em__card_org = css`
@@ -93,7 +93,7 @@ export const em__card_mol = css`
     ${ui.mq('display: block')};
     ${ui.fx};
     ${ui.bdc(ui.c.gray.__300)};
-    background-color: #ffffff2e;
+    background-color: #ffffffaa;
     padding: ${space_img} ${space_img} 0;
     border-radius: 12px;
     /* box-shadow: 2px 2px 2px ${ui.c.gray.__300}; */

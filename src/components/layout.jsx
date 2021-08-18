@@ -5,7 +5,7 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 import Header from './header'
 import * as ui from '../components/style/ui'
-import { gray } from './style/utility.module.scss'
+import { white } from './style/utility.module.scss'
 import './layout.scss'
 
 const Layout = ({ children }) => {
@@ -32,10 +32,13 @@ const Layout = ({ children }) => {
                 <footer css={em__footer}>
                     {new Date().getFullYear()}-{new Date().getMonth() + 1}-
                     {new Date().getDate()}, Built with
-                    <p className={gray}>
+                    <p className={white}>
                         {data.site.siteMetadata?.description}
+                        <span>
+                            &nbsp;on&nbsp;
+                            <a href='https://www.gatsbyjs.com'>Gatsby</a>
+                        </span>
                     </p>
-                    <a href='https://www.gatsbyjs.com'>Gatsby</a>
                 </footer>
             </DivEmContainer>
         </React.Fragment>
@@ -51,7 +54,8 @@ Layout.propTypes = {
 
 /* ===== Style ===== */
 const em__footer = css`
-    margin-top: 24px;
+    margin: 24px auto;
+    ${ui.color(ui.c.white)};
     ${ui.fx_center()};
     flex-direction: column;
 `

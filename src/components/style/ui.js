@@ -61,6 +61,7 @@ export const c = {
     ghost: 'ghostwhite',
     white: 'white',
     black: 'black',
+    gatsby: '#7026B9',
 
     gray: {
         __50: `#fafafa`,

@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
+import InformationPage from './information'
 
 const AboutPage = () => (
     <Layout>
@@ -11,6 +12,7 @@ const AboutPage = () => (
             <Seo title='Page About' />
             <h1 css={em__line}>Hi from the About page</h1>
             <p>Welcome to About</p>
+            <InformationPage />
         </Container>
     </Layout>
 )

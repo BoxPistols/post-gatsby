@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
         title: `Gatsby DesignOps`,
-        description: `Great Gatsby project on DesignOps`,
+        description: ` DesignOps with Great Gatsby`,
         author: `@gatsbyjs`,
         siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     },
@@ -15,6 +15,31 @@ module.exports = {
             options: {
                 name: `images`,
                 path: `${__dirname}/src/images`,
+            },
+            options: {
+                name: `posts`,
+                path: `${__dirname}/src/posts`,
+            },
+        },
+        // マークダウン関連の設定
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                commonmark: true,
+                footnotes: true,
+                pedantic: true,
+                gfm: true,
+                plugins: [
+                    {
+                        resolve: 'gatsby-remark-relative-images',
+                    },
+                    {
+                        resolve: 'gatsby-remark-images',
+                        options: {
+                            maxWidth: 640,
+                        },
+                    },
+                ],
             },
         },
         {
