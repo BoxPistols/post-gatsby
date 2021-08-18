@@ -23,12 +23,13 @@ const em__hero = css`
     /* default  gatsby image class */
     .gatsby-image-wrapper-constrained {
         width: 100vw;
+        min-height: 100vh;
     }
     width: 100vw;
     height: 100vw;
     z-index: -1;
      {
         /* background-image: url('https://picsum.photos/1200/800/?image=1001');
-    background-size: cover; */
+        background-size: cover; */
     }
 `

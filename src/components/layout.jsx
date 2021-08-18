@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
                     {new Date().getDate()}, Built with
                     <p className={white}>
                         {data.site.siteMetadata?.description}
-                        <span>
+                        <span css={em__link}>
                             &nbsp;on&nbsp;
                             <a href='https://www.gatsbyjs.com'>Gatsby</a>
                         </span>
@@ -53,12 +53,6 @@ Layout.propTypes = {
 }
 
 /* ===== Style ===== */
-const em__footer = css`
-    margin: 24px auto;
-    ${ui.color(ui.c.white)};
-    ${ui.fx_center()};
-    flex-direction: column;
-`
 
 const DivEmContainer = styled.div`
     margin: 0 auto;
@@ -79,4 +73,18 @@ const MainEm = styled.main`
 const DivEmInner = styled.div`
     width: 100%;
     padding: 0;
+`
+
+const em__footer = css`
+    margin: 24px auto;
+    ${ui.color(ui.c.white)};
+    ${ui.fx_center()};
+    flex-direction: column;
+`
+const em__link = css`
+    a {
+        /* ${ui.color(ui.c.gatsby)}; */
+        /* text-shadow: 1px 1px 2px ${ui.c.black}; */
+        text-decoration: underline;
+    }
 `
