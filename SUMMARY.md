@@ -12,4 +12,5 @@
 ## 新規 追加Gatsby <a id="add-gatsby"></a>
 
 * [Step1 Setting](add-gatsby/setting.md)
+* [Add Blog use MarkDown](add-gatsby/add-blog-use-markdown.md)
 
