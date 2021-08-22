@@ -1,14 +1,18 @@
 ---
-title: 'title 1'
+title: 'post-1'
 date: '2021-08-18'
 slug: 'post-1'
 thumbnail: './windmill.jpg'
 ---
 
-Blog です
+# post-1 Blog です
+
 ![Sample](./windmill.jpg)
 
 ## topic
+
+-   [ ] これです
+-   [x] これです
 
 ### List
 
