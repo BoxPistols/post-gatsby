@@ -47,3 +47,17 @@ const em__hoge = css`
 
 ```
 
+## Sass導入
+
+```text
+yarn add node-sass gatsby-plugin-sass
+```
+
+gatsby-config.js
+
+```text
+plugins: [`gatsby-plugin-sass`]
+```
+
+
+

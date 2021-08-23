@@ -9,6 +9,7 @@
   * [Step2 CSS設定](fur/setting/step2-css-she-ding.md)
   * [Step3 GraphQL起動確認](fur/setting/step3-gou-zao-que-ren.md)
   * [Step4 Youtube Video UI Test](fur/setting/step4-youtube-video-ui-test.md)
+  * [不具合エラー発生時](fur/setting/er.md)
 
 ## 新規 追加Gatsby <a id="add-gatsby"></a>
 
