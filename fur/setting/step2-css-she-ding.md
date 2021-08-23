@@ -35,3 +35,15 @@ module.exports = {
 
 ↑ Deploy / CSS / Build / ALL OK!!
 
+```javascript
+import { css } from '@emotion/react'
+
+<div css={em__hoge}>
+...
+
+const em__hoge = css`
+    position: fixed;
+    ...
+
+```
+
