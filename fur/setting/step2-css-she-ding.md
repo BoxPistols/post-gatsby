@@ -63,3 +63,15 @@ plugins: [`gatsby-plugin-sass`]
 
 
 
+拡張子とimport変更
+
+* layout.css → .scss
+  * Sass対応にまとめ直す
+  * コンバーターも良し
+  * 重複CSSを目視でも確認
+* import ... .css → .scss
+
+{% embed url="https://css2sass.herokuapp.com/" %}
+
+
+
