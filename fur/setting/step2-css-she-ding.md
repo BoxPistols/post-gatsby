@@ -49,6 +49,8 @@ const em__hoge = css`
 
 ## Sass導入
 
+{% embed url="https://www.gatsbyjs.com/plugins/gatsby-plugin-sass/" %}
+
 ```text
 yarn add node-sass gatsby-plugin-sass
 ```
