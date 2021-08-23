@@ -9,6 +9,3 @@ description: Gatsby導入
 ### Example
 
 {% embed url="https://code-log.hatenablog.com/entry/2020/02/28/113323" %}
-
-
-

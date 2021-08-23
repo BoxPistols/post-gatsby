@@ -1,0 +1,187 @@
+/**
+* WIP
+* Set with Emotion
+*/
+
+/* ===== Spacing ===== */
+
+$spacing: (
+    'none': 0px,
+    'xxxs': 2px,
+    'xxs': 4px,
+    'xs': 8px,
+    'sm': 12px,
+    'md': 16px,
+    'lg': 24px,
+    'xl': 32px,
+    'xxl': 40px,
+    'xxxl': 48px,
+    'big': 60px,
+    'bigger': 72px,
+);
+
+/*** --- BreakPoints for Responsive --- ***/
+
+/* BreakPoints for Var */
+$bkp_xs: 480px;
+$bkp_sm: 768px;
+$bkp_md: 1280px;
+$bkp_lg: 1440px;
+$bkp_xl: 1920px;
+
+/* BreakPoints for Map */
+$breakPoints: (
+    'xs': $bkp_xs,
+    'sm': $bkp_sm,
+    'md': $bkp_md,
+    'lg': $bkp_lg,
+    'xl': $bkp_xl,
+);
+
+/* position */
+
+.pos {
+    &_rel {
+        position: relative;
+    }
+
+    &_abs {
+        position: absolute;
+    }
+}
+
+/* Heading 一括 */
+
+[class^='head_'] {
+    line-height: 1.8;
+    color: gray;
+}
+
+/***** calc mixin *****/
+// px to Rem function
+$default_size: 16;
+
+@function size($target, $context: $default_size) {
+    @return $target / $context * 1rem;
+}
+
+// set usecase example common.scss base.scss
+
+// Start 8px End 20px Multiple 2px
+$startPx: 8;
+$endPx: 20;
+$multiplePx: 2;
+
+@for $i from 0 through ($endPx - $startPx) / $multiplePx {
+    .fz#{$startPx + $i * $multiplePx} {
+        font-size: size($startPx + $i * $multiplePx);
+    }
+}
+
+// Start 24px End 48px Multiple 4px
+$startPx: 24;
+$endPx: 48;
+$multiplePx: 4;
+
+@for $i from 0 through ($endPx - $startPx) / $multiplePx {
+    .fz#{$startPx + $i * $multiplePx} {
+        font-size: size($startPx + $i * $multiplePx);
+    }
+}
+
+// vw font-size sample
+.vw_normal {
+    font-size: calc(12px + 2vw); // for IE
+    font-size: clamp(18px, 2.4vw, 24px); // (min, default, max)
+
+    @media only screen and (min-width: 960px) {
+        font-size: size(24);
+    }
+}
+
+/*
+  use case for margin / padding
+*/
+
+$startPx: 4; // for start px
+$endPx: 40; // for end px
+$multiplePx: 4; // n + 4 (4 8 12...)
+
+@for $i from 0 through ($endPx - $startPx) / $multiplePx {
+    // margin
+    .mg#{$startPx + $i * $multiplePx} {
+        margin: size($startPx + $i * $multiplePx);
+    }
+
+    .mt#{$startPx + $i * $multiplePx} {
+        margin-top: size($startPx + $i * $multiplePx);
+    }
+
+    .ml#{$startPx + $i * $multiplePx} {
+        margin-left: size($startPx + $i * $multiplePx);
+    }
+
+    .mr#{$startPx + $i * $multiplePx} {
+        margin-right: size($startPx + $i * $multiplePx);
+    }
+
+    .mb#{$startPx + $i * $multiplePx} {
+        margin-bottom: size($startPx + $i * $multiplePx);
+    }
+
+    .mg_x#{$startPx + $i * $multiplePx} {
+        margin-left: size($startPx + $i * $multiplePx);
+        margin-right: size($startPx + $i * $multiplePx);
+    }
+    .mg_y#{$startPx + $i * $multiplePx} {
+        margin-top: size($startPx + $i * $multiplePx);
+        margin-bottom: size($startPx + $i * $multiplePx);
+    }
+
+    // padding
+    .pd#{$startPx + $i * $multiplePx} {
+        padding: size($startPx + $i * $multiplePx);
+    }
+
+    .pt#{$startPx + $i * $multiplePx} {
+        padding-top: size($startPx + $i * $multiplePx);
+    }
+
+    .pl#{$startPx + $i * $multiplePx} {
+        padding-left: size($startPx + $i * $multiplePx);
+    }
+
+    .pr#{$startPx + $i * $multiplePx} {
+        padding-right: size($startPx + $i * $multiplePx);
+    }
+
+    .pb#{$startPx + $i * $multiplePx} {
+        padding-bottom: size($startPx + $i * $multiplePx);
+    }
+    .pb_y#{$startPx + $i * $multiplePx} {
+        padding-top: size($startPx + $i * $multiplePx);
+        padding-bottom: size($startPx + $i * $multiplePx);
+    }
+    .pb_x#{$startPx + $i * $multiplePx} {
+        padding-left: size($startPx + $i * $multiplePx);
+        padding-right: size($startPx + $i * $multiplePx);
+    }
+}
+
+/*
+  @mixin use case for margin / padding
+*/
+$max: 72;
+$offset: 8;
+$unit: 'px'; // Feel free to change the unit.
+@mixin list-loop($styleName) {
+    $i: 0;
+    @while $i <= $max {
+        #{$i} {
+            #{$styleName}: #{$i + $unit};
+        }
+        $i: $i + $offset;
+    }
+}
+@include list-loop('padding-left');
+// Terrible name for mixin by the way.

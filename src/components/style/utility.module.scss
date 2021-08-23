@@ -1,0 +1,16 @@
+.gray {
+    color: var(--gray);
+}
+
+/* ===== Common Style ===== */
+:root {
+    /* Color */
+    --gray: dimgray;
+    --white: white;
+    --gatsby: #7026b9;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}

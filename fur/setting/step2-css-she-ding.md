@@ -1,12 +1,12 @@
 ---
 description: >-
-  https://github.com/BoxPistols/gatsby-dev ->
-  https://github.com/BoxPistols/post-gatsby
+    https://github.com/BoxPistols/gatsby-dev ->
+    https://github.com/BoxPistols/post-gatsby
 ---
 
-# Step2 CSS設定
+# Step2 CSS 設定
 
-## CSS設定
+## CSS 設定
 
 ### Emotion
 
@@ -15,10 +15,9 @@ description: >-
 
 ### 開発環境切り替え
 
-* VercelからのPullはエラーがあるため、ローカルでGatsby CLI再構築
+-   Vercel からの Pull はエラーがあるため、ローカルで Gatsby CLI 再構築
 
 [https://github.com/BoxPistols/post-gatsby](https://github.com/BoxPistols/post-gatsby)
-
 
 
 ### [Emotion](https://www.gatsbyjs.com/docs/how-to/styling/emotion/) :Re
@@ -72,6 +71,3 @@ plugins: [`gatsby-plugin-sass`]
 * import ... .css → .scss
 
 {% embed url="https://css2sass.herokuapp.com/" %}
-
-
-

@@ -1,91 +1,89 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from 'react'
 import PropTypes from 'prop-types'
-import Iframe from 'react-iframe'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Link } from 'gatsby'
 import styled from '@emotion/styled'
+import { css } from '@emotion/react'
 import Header from './header'
-import './layout.css'
-import { gray, youtube } from './style/utility.module.css'
+import * as ui from '../components/style/ui'
+import './layout.scss'
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-          description
+    const data = useStaticQuery(graphql`
+        query SiteTitleQuery {
+            site {
+                siteMetadata {
+                    title
+                    description
+                }
+            }
         }
-      }
-    }
-  `)
+    `)
 
-  return (
-    <React.Fragment>
-      <div className={youtube}>
-        <Iframe
-          id='ytplayer'
-          type='text/html'
-          width='720'
-          height='405'
-          src='https://www.youtube.com/embed/XdlmoLAbbiQ?autoplay=1&mute=1&controls=0&loop=1&playlist=XdlmoLAbbiQ'
-          frameborder='0'
-          allowfullscreen
-        />
-      </div>
-
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <DivEmContainer>
-        <FooterEm>
-          <p>
-            <Link to='/page-2/'>Go to page 2</Link> /
-            <Link to='/about/'>Go to About</Link> /
-            <Link to='/using-typescript/'>Go to "Using TypeScript"</Link>
-          </p>
-        </FooterEm>
-        <DivEmInner>
-          <MainEm>{children}</MainEm>
-        </DivEmInner>
-        {new Date().getFullYear()}, Built with
-        <p className={gray}>{data.site.siteMetadata?.description}</p>
-        <a href='https://www.gatsbyjs.com'>Gatsby</a>
-      </DivEmContainer>
-    </React.Fragment>
-  )
-}
-
-/* ===== Style ===== */
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+    return (
+        <React.Fragment>
+            <DivEmContainer>
+                <DivEmInner>
+                    <Header
+                        siteTitle={data.site.siteMetadata?.title || `Title`}
+                    />
+                    <MainEm>{children}</MainEm>
+                </DivEmInner>
+                <footer css={em__footer}>
+                    {new Date().getFullYear()}-{new Date().getMonth() + 1}-
+                    {new Date().getDate()}, Built with
+                    <p>
+                        {data.site.siteMetadata?.description}
+                        <span css={em__link}>
+                            &nbsp;on&nbsp;
+                            <a href='https://www.gatsbyjs.com'>Gatsby</a>
+                        </span>
+                    </p>
+                </footer>
+            </DivEmContainer>
+        </React.Fragment>
+    )
 }
 
 export default Layout
 
+/* ===== propTypes ===== */
+Layout.propTypes = {
+    children: PropTypes.node.isRequired,
+}
+
+/* ===== Style ===== */
+
 const DivEmContainer = styled.div`
-  margin: 0 auto;
-  max-width: 100vw;
-  padding: 0 1.0875rem 1.45rem;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 200vh;
 `
 
 const MainEm = styled.main`
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-center;
+    align-items: center;
+    max-width: 1200px;
+    padding: 24px;
 `
 
 const DivEmInner = styled.div`
-  margin: 0 auto;
-  max-width: 1440px;
-  padding: 0 1.0875rem 1.45rem;
+    width: 100%;
+    padding: 0;
 `
 
-const FooterEm = styled.footer`
-  margin: 2em auto 0;
+const em__footer = css`
+    margin: 24px auto;
+    ${ui.color(ui.c.white)};
+    ${ui.fx_center()};
+    flex-direction: column;
+`
+const em__link = css`
+    a {
+        /* ${ui.color(ui.c.gatsby)}; */
+        /* text-shadow: 1px 1px 2px ${ui.c.black}; */
+        text-decoration: underline;
+    }
 `
