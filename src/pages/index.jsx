@@ -4,14 +4,14 @@ import Seo from '../components/seo'
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 import * as ui from '../components/style/ui'
-import { Video } from '../components/video'
+// import { Video } from '../components/video'
 import { Card } from '../components/card'
 import { Hero } from '../components/hero'
 
 const IndexPage = () => (
     <>
-        <Video />
-        {/* <Hero /> */}
+        {/* <Video /> */}
+        <Hero />
         <Layout>
             <Seo title='Home' />
             <H2Em>Technology Heroes</H2Em>
