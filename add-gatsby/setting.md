@@ -2,7 +2,9 @@
 description: 既存のフォルダにGatsbyを追加
 ---
 
-# Step1 Setting
+# Step1 Setting CLI
+
+## CLI
 
 {% embed url="https://www.gatsbyjs.com/docs/reference/gatsby-cli/" %}
 

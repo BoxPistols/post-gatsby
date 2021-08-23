@@ -10,8 +10,8 @@ description: >-
 
 ### Emotion
 
-* ※Emotion CSSは不具合あり、代替=CSS Module
-  * Emotionはstyledをメインにする
+* ~~※Emotion CSSは不具合あり、代替=CSS Module~~
+  * ~~Emotionはstyledをメインにする~~
 
 ### 開発環境切り替え
 
@@ -19,7 +19,7 @@ description: >-
 
 [https://github.com/BoxPistols/post-gatsby](https://github.com/BoxPistols/post-gatsby)
 
-### 
+
 
 ### [Emotion](https://www.gatsbyjs.com/docs/how-to/styling/emotion/) :Re
 
