@@ -1,10 +1,10 @@
 ---
 description: >-
-    https://github.com/BoxPistols/gatsby-dev ->
-    https://github.com/BoxPistols/post-gatsby
+  https://github.com/BoxPistols/gatsby-dev ->
+  https://github.com/BoxPistols/post-gatsby
 ---
 
-# Step2 CSS 設定
+# Step2 CSS設定
 
 ## CSS 設定
 
@@ -15,10 +15,9 @@ description: >-
 
 ### 開発環境切り替え
 
--   Vercel からの Pull はエラーがあるため、ローカルで Gatsby CLI 再構築
+* Vercel からの Pull はエラーがあるため、ローカルで Gatsby CLI 再構築
 
 [https://github.com/BoxPistols/post-gatsby](https://github.com/BoxPistols/post-gatsby)
-
 
 ### [Emotion](https://www.gatsbyjs.com/docs/how-to/styling/emotion/) :Re
 
@@ -43,12 +42,11 @@ import { css } from '@emotion/react'
 const em__hoge = css`
     position: fixed;
     ...
-
 ```
 
 ## Sass導入
 
-{% embed url="https://www.gatsbyjs.com/plugins/gatsby-plugin-sass/" %}
+{% embed url="https://www.gatsbyjs.com/plugins/gatsby-plugin-sass/" caption="" %}
 
 ```text
 yarn add node-sass gatsby-plugin-sass
@@ -60,8 +58,6 @@ gatsby-config.js
 plugins: [`gatsby-plugin-sass`]
 ```
 
-
-
 拡張子とimport変更
 
 * layout.css → .scss
@@ -70,4 +66,5 @@ plugins: [`gatsby-plugin-sass`]
   * 重複CSSを目視でも確認
 * import ... .css → .scss
 
-{% embed url="https://css2sass.herokuapp.com/" %}
+{% embed url="https://css2sass.herokuapp.com/" caption="" %}
+

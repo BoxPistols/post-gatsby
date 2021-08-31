@@ -10,3 +10,4 @@ description: graphQL
 {% embed url="http://localhost:8000/\_\_\_graphql" caption="GraphQL" %}
 
 ![](../../.gitbook/assets/image%20%282%29.png)
+
