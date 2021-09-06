@@ -24,6 +24,14 @@ module.exports = {
                 path: `${__dirname}/src/posts`,
             },
         },
+        // {
+        //     resolve: `gatsby-source-filesystem`,
+        //     options: {
+        //         name: `posts`,
+        //         path: `./src/content/posts`,
+        //     },
+        // },
+
         // マークダウン関連の設定
         {
             resolve: `gatsby-transformer-remark`,
