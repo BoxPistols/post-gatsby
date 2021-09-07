@@ -1,9 +1,3 @@
----
-
-description: index
-
----
-
 - Docs(Docsify)
  -  https://boxpistols.github.io/post-gatsby/   
 
