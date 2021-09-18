@@ -22,6 +22,8 @@
 
 ## Contentful
 
-* [Contetful導入](contentful/contetful-dao-ru.md)
-* [Untitled](contentful/untitled.md)
+* [Contetful導入](contentful/contetful-dao-ru/README.md)
+  * [タイトルの設定](contentful/contetful-dao-ru/taitoruno.md)
+  * [Slug](contentful/contetful-dao-ru/slug.md)
+  * [コンテンツタイプ設計](contentful/contetful-dao-ru/kontentsutaipu.md)
 
