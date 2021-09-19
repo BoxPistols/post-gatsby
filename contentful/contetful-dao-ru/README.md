@@ -39,15 +39,15 @@ description: setup
 * タイトルから作成
   * Add fieldクリック
 
-![Add field](../../.gitbook/assets/image%20%2811%29.png)
+![Add field](../../.gitbook/assets/image%20%2813%29.png)
 
 ## 備考
 
 ### Localse設定 -&gt; 日本
 
-![](../../.gitbook/assets/image%20%288%29.png)
+![](../../.gitbook/assets/image%20%2810%29.png)
+
+![](../../.gitbook/assets/image%20%2811%29.png)
 
 ![](../../.gitbook/assets/image%20%289%29.png)
-
-![](../../.gitbook/assets/image%20%287%29.png)
 
