@@ -1,3 +1,8 @@
+const dotenv = require('dotenv')
+if(process.env.ENVIRONMENT !== 'production') {
+    dotenv.config()
+}
+
 module.exports = {
     siteMetadata: {
         title: `Gatsby DesignOps`,
@@ -22,16 +27,9 @@ module.exports = {
             options: {
                 name: `posts`,
                 path: `${__dirname}/src/posts`,
+                // path: `./src/content/posts`,
             },
         },
-        // {
-        //     resolve: `gatsby-source-filesystem`,
-        //     options: {
-        //         name: `posts`,
-        //         path: `./src/content/posts`,
-        //     },
-        // },
-
         // マークダウン関連の設定
         {
             resolve: `gatsby-transformer-remark`,
@@ -72,6 +70,14 @@ module.exports = {
                 icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
             },
         },
+        {
+            resolve: `gatsby-source-contentful`,
+            options: {
+                spaceId: process.env.spaceId,
+                accessToken: process.env.accessToken,
+            },
+        },
+
         `gatsby-plugin-gatsby-cloud`,
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
