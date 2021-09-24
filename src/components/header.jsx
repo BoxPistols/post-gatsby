@@ -32,7 +32,7 @@ const em__header = css`
         width: 100%;
         height: 100%;
         z-index: -1;
-        background-color: #22334465;
+        background-color: #fff3;
         backdrop-filter: blur(1.25px);
     }
     > div {
