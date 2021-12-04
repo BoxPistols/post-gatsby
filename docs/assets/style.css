@@ -1,0 +1,122 @@
+/* index logo */
+
+/*
+body {
+    background: #191936;
+}
+*/
+
+.sidebar > h1 {
+    margin: 0 0 4px 32px;
+
+    text-align: left;
+}
+
+a.app-name-link {
+    font-size: 16px;
+
+    padding: 4px 32px 6px;
+
+    border: 1px solid #abc;
+    border-radius: 4em;
+}
+
+/*
+.sidebar-nav ul  li > p open.active {
+    background: rgba(0, 0, 0, 0.04);
+}
+*/
+
+.sidebar-nav ul > li.open.active {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+/* Tab design */
+
+:root {
+    --docsifytabs-border-color: #ededed;
+    --docsifytabs-tab-highlight-color: rgb(9, 129, 81);
+}
+
+.docsify-tabs__tab:hover {
+    cursor: pointer;
+    transition: 0.3s;
+
+    background: #d4e5e0;
+}
+
+.docsify-tabs__tab--active:focus {
+    outline: none;
+    background: #d4e5e0;
+}
+
+/* Search */
+
+.search .input-wrap input {
+    font-size: 12px;
+    line-height: 32px;
+
+    max-width: 258px;
+    margin: 16px auto 8px;
+    padding: 0 1em;
+
+    transition: 0.2s;
+
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.search .input-wrap input:focus {
+    outline: none;
+}
+
+.search .input-wrap input:hover {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 200, 180, 0.1);
+}
+
+.search .results-panel.show p.empty {
+    position: absolute;
+    top: 40px;
+    left: 32px;
+
+    display: block;
+
+    opacity: 0.8;
+    color: crimson;
+}
+
+.search .clear-button.show {
+    position: absolute;
+    top: 8px;
+    right: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.8;
+}
+
+.search .clear-button.show svg {
+    margin-bottom: -4px;
+    margin-left: -2px;
+
+    transform: scale(1.2);
+}
+
+.search .results-panel.show {
+    display: block;
+
+    padding: 14px;
+}
+
+/* Side Nav */
+
+.sidebar {
+    border-right: 1px solid rgb(197 215 207);
+}
+
+.sidebar .sidebar-nav {
+    padding: 8px 32px 40px;
+}

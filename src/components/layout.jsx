@@ -76,7 +76,7 @@ const DivEmInner = styled.div`
 
 const em__footer = css`
     margin: 24px auto;
-    ${ui.color(ui.c.white)};
+    ${'' /* ${ui.color(ui.c.white)}; */}
     ${ui.fx_center()};
     flex-direction: column;
 `

@@ -1,14 +1,17 @@
 ---
-title: 'title 1'
+title: 'title ２'
 date: '2021-08-18'
 slug: 'post-1'
 thumbnail: '../images/city.jpg'
 ---
 
-Blog です
+## 2 の Blog です
+
 ![Sample](../images/city.jpg)
 
 ## topic
+
+これですねー
 
 ### List
 
